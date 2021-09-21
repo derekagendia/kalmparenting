@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="{{ asset('css/theme.bundle.css') }}"/>
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.css') }}" rel="stylesheet">
+
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <style type="text/css">
         .page-header {
         }
@@ -48,8 +56,6 @@
 
 <body>
 
-<!-- modal -->
-
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -60,36 +66,38 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="POST" action="{{ route('join') }}">
+                    @csrf
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="exampleInputtext1" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="exampleInputtext1">
+                                <input name="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" id="exampleInputtext1">
                             </div>
                             <div class="col-md-6">
                                 <label for="exampleInputtext1" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="exampleInputtext1">
+                                <input name="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" id="exampleInputtext1">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
                                 <label for="exampleInputtext1" class="form-label">Your whatsapp Number</label>
-                                <input type="phone" class="form-control" id="exampleInputtext1">
+                                <input name="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" id="exampleInputtext1">
                             </div>
                             <div class="col-12">
                                 <label for="exampleFormControlTextarea1" class="form-label">Your message
                                     (optional)</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="content" class="form-control @error('content') is-invalid @enderror" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
-                </form>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger">Submit</button>
+                <input type="submit" class="btn btn-danger" value="Submit"/>
             </div>
+            </form>
         </div>
     </div>
 </div>
@@ -255,6 +263,50 @@
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel();
         });
+
+        @if(count($errors) > 0)
+            @foreach($errors->all() as $error)
+            toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        toastr.error("{{ $error }}");
+        @endforeach
+            @endif
+
+            @if(session()->has('message'))
+            toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        toastr.success("{{ session('message') }}");
+        @endif
     </script>
 
 </body>
