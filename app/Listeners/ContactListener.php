@@ -27,6 +27,6 @@ class ContactListener
      */
     public function handle($event)
     {
-        Mail::to('info@kalmparenting.com')->send(new ContactMail($event->data));
+        Mail::to('applicationweb@kalmparenting.com')->send(new ContactMail($event->data));
     }
 }
