@@ -19,7 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72cfc562-c77f-4e80-9a08-889ecc648cbb" name="Default Changelist" comment="" />
+    <list default="true" id="72cfc562-c77f-4e80-9a08-889ecc648cbb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Widgets/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Widgets/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/voyager.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/voyager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kalmparenting.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,11 +167,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1yQjFfdmzdBSaU0f7izfJBNeDR6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -170,6 +187,9 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -183,6 +203,7 @@
       <updated>1632190609014</updated>
       <workItem from="1632190666746" duration="584000" />
       <workItem from="1632192020778" duration="240000" />
+      <workItem from="1632231757599" duration="8326000" />
     </task>
     <servers />
   </component>
@@ -200,5 +221,14 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1632249226967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632249226967" />
   </component>
 </project>
