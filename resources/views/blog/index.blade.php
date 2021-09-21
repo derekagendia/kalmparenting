@@ -20,191 +20,47 @@
 
     <div class="container">
         <div class="row mt-5 mb-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
+            @forelse($posts as $post)
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
+                        <!-- Image  -->
+                        <img class="card-img rounded-top-start" src="{{ asset(Voyager::image($post->image)) }}" alt="...">
+                        <!-- SHAPE -->
+                        <div class="position-relative">
+                            <div class="shape shape-fluid-x shape-top text-white">
+                                <div class="shape-img pb-4">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                                        <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="#">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Heading -->
+                            <div class="d-flex align-items-center mb-3">
+                                <h3>{{ $post->title }}</h3>
                             </div>
+                            <!-- Text -->
+                            <small>
+                                {{ $post->excerpt }}
+                            </small>
+                            <p class="mt-3"><a href="{{ route('blog.detail',$post->slug) }}" target="_blank">
+                                    <button class="btn btn-danger btn-sm">Details</button>
+                                </a></p>
                         </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="#">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
-                            </div>
+            @empty
+                <div class="col-lg-4 col-md-6">
+                    <div class="item item-thumbnail">
+                        <div class="item-info">
+                            <p class="item-desc"> {{ __('Not data Post') }}</p>
                         </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="#">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="#">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="#">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card card-sm rounded-top-start rounded-bottom-end lift mt-3">
-                    <!-- Image  -->
-                    <img class="card-img rounded-top-start" src="./img/cardimage.jpg" alt="...">
-                    <!-- SHAPE -->
-                    <div class="position-relative">
-                        <div class="shape shape-fluid-x shape-top text-white">
-                            <div class="shape-img pb-4">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none">
-                                    <path d="M0 25h25L75 0h25v50H0z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Heading -->
-                        <div class="d-flex align-items-center mb-3">
-                            <h3>Blog title here</h3>
-                        </div>
-                        <!-- Text -->
-                        <small>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non.
-                        </small>
-                        <p class="mt-3"><a href="{{ route('blog.detail') }}">
-                                <button class="btn btn-danger btn-sm">Details</button>
-                            </a></p>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
+        {{ $posts->links() }}
     </div>
 @endsection
