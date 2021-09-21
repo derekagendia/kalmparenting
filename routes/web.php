@@ -19,6 +19,8 @@ Route::get('/blogs/detail/{slug}', [\App\Http\Controllers\BlogController::class,
 Route::get('/events', [\App\Http\Controllers\EventController::class,'index'])->name('event');
 Route::get('/events/detail/{slug}', [\App\Http\Controllers\EventController::class,'detail'])->name('event.detail');
 
+Route::post('/contact',[\App\Http\Controllers\ContactController::class,'contact'])->name('join');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
