@@ -175,7 +175,9 @@
                     <!-- List -->
                     <ul class="list-inline list-unstyled text-gray-600 small mb-md-0">
                         <li class="list-inline-item">
-                            © <script>document.write(new Date().getFullYear());</script> Kalm Parenting
+                            ©
+                            <script>document.write(new Date().getFullYear());</script>
+                            Kalm Parenting
                         </li>
                         <li class="list-inline-item ms-md-8">
                             <a class="text-reset" href="#!">
