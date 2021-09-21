@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\SiteController::class,'index'])->name('home');
 Route::get('/blogs', [\App\Http\Controllers\BlogController::class,'index'])->name('blog');
-Route::get('/blogs/detail', [\App\Http\Controllers\BlogController::class,'detail'])->name('blog.detail');
+Route::get('/blogs/detail/{slug}', [\App\Http\Controllers\BlogController::class,'detail'])->name('blog.detail');
 Route::get('/events', [\App\Http\Controllers\EventController::class,'index'])->name('event');
-Route::get('/events/detail', [\App\Http\Controllers\EventController::class,'detail'])->name('event.detail');
+Route::get('/events/detail/{slug}', [\App\Http\Controllers\EventController::class,'detail'])->name('event.detail');
 
 
 Route::group(['prefix' => 'admin'], function () {
