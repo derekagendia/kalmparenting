@@ -14,8 +14,8 @@ class BlogController extends Controller
         return view('blog.index', $data);
     }
 
-    public function detail()
+    public function detail($slug)
     {
-        return view('blog.detail');
+        return view('blog.detail',['post' => Post::where('slug', $slug)->firstOrfail()]);
     }
 }
