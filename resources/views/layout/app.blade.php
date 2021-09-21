@@ -144,25 +144,19 @@
 
                     <!-- Heading -->
                     <h6 class="text-uppercase text-white mb-3 mb-md-5">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="{{ route('home') }}" class="nav-link">Home</a>
                     </h6>
 
                 </div>
                 <div class="col-6 col-md">
 
                     <h6 class="text-uppercase text-white mb-3 mb-md-5">
-                        <a href="event.html" class="nav-link">Event</a>
+                        <a href="{{ route('event') }}" class="nav-link">Event</a>
                     </h6>
                 </div>
                 <div class="col-6 col-md">
                     <h6 class="text-uppercase text-white mb-3 mb-md-5">
-                        <a href="blog.html" class="nav-link">Blog</a>
-                    </h6>
-                </div>
-                <div class="col-6 col-md">
-                    <!-- Heading -->
-                    <h6 class="text-uppercase text-white mb-3 mb-md-5">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="{{ route('blog') }}" class="nav-link">Blog</a>
                     </h6>
                 </div>
 
@@ -181,7 +175,7 @@
                     <!-- List -->
                     <ul class="list-inline list-unstyled text-gray-600 small mb-md-0">
                         <li class="list-inline-item">
-                            © 2021 Kalm Parenting
+                            © <script>document.write(new Date().getFullYear());</script> Kalm Parenting
                         </li>
                         <li class="list-inline-item ms-md-8">
                             <a class="text-reset" href="#!">
