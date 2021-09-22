@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72cfc562-c77f-4e80-9a08-889ecc648cbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kalmparenting.zip" beforeDir="false" afterPath="$PROJECT_DIR$/kalmparenting.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mail/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/contact.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="72cfc562-c77f-4e80-9a08-889ecc648cbb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +192,7 @@
       <workItem from="1632190666746" duration="584000" />
       <workItem from="1632192020778" duration="240000" />
       <workItem from="1632231757599" duration="17419000" />
-      <workItem from="1632326786429" duration="1166000" />
+      <workItem from="1632326786429" duration="2000000" />
     </task>
     <servers />
   </component>
