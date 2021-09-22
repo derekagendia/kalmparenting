@@ -125,7 +125,7 @@
                                 <small>
                                     {{ $post->excerpt }}
                                 </small>
-                                <p class="mt-3"><a href="{{ route('blog.detail') }}">
+                                <p class="mt-3"><a href="{{ route('blog.detail',$post->slug) }}">
                                         <button class="btn btn-danger btn-sm">Details</button>
                                     </a></p>
 
