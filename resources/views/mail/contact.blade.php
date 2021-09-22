@@ -1,12 +1,18 @@
 @component('mail::message')
-# Introduction
 
-The body of your message.
+    @if(isset($data['content']))
+        # Introduction
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+        {{ $data['content'] }}
+    @endif
 
-Thanks,<br>
-{{ config('app.name') }}
+    # Information of user
+
+    First Name : {{ $data['first_name'] }}
+    Last Name : {{ $data['last_name'] }}
+    Whatsapp Number : {{ $data['phone'] }}
+
+
+    Thanks,<br>
+    {{ config('app.name') }}
 @endcomponent
