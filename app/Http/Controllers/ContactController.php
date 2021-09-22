@@ -11,6 +11,6 @@ class ContactController extends Controller
     {
         event(new ContactEvent($request->all()));
 
-        return redirect()->back()->with('Thank for Joining');
+        return redirect()->back()->with('message','Thank for Joining');
     }
 }
