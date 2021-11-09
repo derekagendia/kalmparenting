@@ -3,7 +3,10 @@
 
     <div class="container-fluid">
         <div class="row g-0">
-            <div class="col-md-6  pe-3">
+            <div class="col-md-6  pe-3" data-aos="fade-right"
+                 data-aos-offset="300"
+                 data-aos-easing="ease-in-sine"
+                 data-aos-duration="2000">
                 <h3 class="display-3 mb-5" style="padding-top:13rem;">
                     Raising responsible kids while pursuing a career is possible
                 </h3>
@@ -16,7 +19,7 @@
                         <button class="btn btn-outline-danger">Learn more</button>
                     </a></p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="flip-right" data-aos-duration="2000">
                 <img src="{{ asset('img/kid.png') }}" class="img-fluid w-100" alt="kid">
             </div>
         </div>
@@ -30,12 +33,16 @@
             <div class="row">
                 <div class="col-md-6"></div>
                 <div class="col-md-6">
-                    <h1 class="text-white display-4 mb-3">What is Kalm parenting</h1>
-                    <p class="text-white">
+                    <h1 class="text-white display-4 mb-3" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000">What is Kalm parenting</h1>
+                    <p class="text-white" data-aos="flip-right"
+                       data-aos-easing="ease-out-cubic"
+                       data-aos-duration="2000">
                         Kalm parenting is a platform made for women who want to raise their kids to become responsible
                         individuals in the society without necessarily sacrificing their own dreams and aspirations.
                     </p>
-                    <p><a href="#" aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">
+                    <p data-aos="zoom-in" data-aos-duration="1000" ><a href="#" aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">
                             <button class="btn btn-white">Join our community</button>
                         </a></p>
                 </div>
@@ -101,7 +108,8 @@
                     <div class="col-md-4">
                         <div class="card card-sm rounded-top-start rounded-bottom-end lift">
                             <!-- Image  -->
-                            <img class="card-img rounded-top-start" src="{{ asset(Voyager::image($post->image)) }}" alt="...">
+                            <img class="card-img rounded-top-start" src="{{ asset(Voyager::image($post->image)) }}"
+                                 alt="...">
                             <!-- SHAPE -->
                             <div class="position-relative">
                                 <div class="shape shape-fluid-x shape-top text-white">

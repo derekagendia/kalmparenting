@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon"/>
 
     <!-- Map CSS -->
     <link rel="stylesheet" href="{{ asset('js/mapbox-gl.css') }}"/>
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="{{ asset('css/libs.bundle.css') }}"/>
+
+    <!-- Libs CSS AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
     <!--
       Theme Sans Serif CSS
@@ -37,6 +41,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
     <style type="text/css">
         .page-header {
         }
@@ -72,22 +77,28 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="exampleInputtext1" class="form-label">First Name</label>
-                                <input name="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" id="exampleInputtext1">
+                                <input name="first_name" type="text"
+                                       class="form-control @error('first_name') is-invalid @enderror"
+                                       id="exampleInputtext1">
                             </div>
                             <div class="col-md-6">
                                 <label for="exampleInputtext1" class="form-label">Last Name</label>
-                                <input name="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" id="exampleInputtext1">
+                                <input name="last_name" type="text"
+                                       class="form-control @error('last_name') is-invalid @enderror"
+                                       id="exampleInputtext1">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-12">
                                 <label for="exampleInputtext1" class="form-label">Your whatsapp Number</label>
-                                <input name="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" id="exampleInputtext1">
+                                <input name="phone" type="phone"
+                                       class="form-control @error('phone') is-invalid @enderror" id="exampleInputtext1">
                             </div>
                             <div class="col-12">
                                 <label for="exampleFormControlTextarea1" class="form-label">Your message
                                     (optional)</label>
-                                <textarea name="content" class="form-control @error('content') is-invalid @enderror" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="content" class="form-control @error('content') is-invalid @enderror"
+                                          id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
@@ -107,7 +118,10 @@
 <section class="page-header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"><img src="{{asset('img/logo.png')}}" style="
+    height: auto;
+    width: 15%;
+"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -260,9 +274,13 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
     <script>
+        AOS.init();
+    </script>
+    <script>
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel();
         });
+
 
         @if(count($errors) > 0)
             @foreach($errors->all() as $error)
