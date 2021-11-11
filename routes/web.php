@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\SiteController::class,'index'])->name('home');
-Route::get('/blogs', [\App\Http\Controllers\BlogController::class,'index'])->name('blog');
-Route::get('/blogs/detail/{slug}', [\App\Http\Controllers\BlogController::class,'detail'])->name('blog.detail');
-Route::get('/events', [\App\Http\Controllers\EventController::class,'index'])->name('event');
-Route::get('/events/detail/{slug}', [\App\Http\Controllers\EventController::class,'detail'])->name('event.detail');
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+], function () {
+    Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])->name('home');
+    Route::get('/blogs', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog');
+    Route::get('/blogs/detail/{slug}', [\App\Http\Controllers\BlogController::class, 'detail'])->name('blog.detail');
+    Route::get('/events', [\App\Http\Controllers\EventController::class, 'index'])->name('event');
+    Route::get('/events/detail/{slug}', [\App\Http\Controllers\EventController::class, 'detail'])->name('event.detail');
 
-Route::post('/contact',[\App\Http\Controllers\ContactController::class,'contact'])->name('join');
+    Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('join');
+
+});
 
 
 Route::group(['prefix' => 'admin'], function () {
