@@ -130,22 +130,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">{{ __('nav.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{{ route('event') }}">Event</a>
+                        <a class="nav-link " aria-current="page" href="{{ route('event') }}">{{ __('nav.event') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{{ route('blog') }}">Blog</a>
+                        <a class="nav-link " aria-current="page" href="{{ route('blog') }}">{{ __('nav.blog') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                           href="#">Contact</a>
+                           href="#">{{ __('nav.contact') }}</a>
                     </li>
                 </ul>
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        Translate
+                        {{ __('nav.translate') }}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

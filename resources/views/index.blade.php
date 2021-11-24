@@ -8,7 +8,7 @@
                  data-aos-easing="ease-in-sine"
                  data-aos-duration="2000">
                 <h3 class="display-3 mb-5" style="padding-top:13rem;">
-                    Raising responsible kids while pursuing a career is possible
+                    {{ __('Raising responsible kids while pursuing a career is possible!') }}
                 </h3>
                 <p class="lead fw-bolder">Give our platform a try, and enter a world of parental knowledge that will
                     turn you into an amazing parent</p>
