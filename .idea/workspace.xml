@@ -176,6 +176,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\kalmparenting\resources\lang" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -201,7 +206,7 @@
       <workItem from="1632326786429" duration="2000000" />
       <workItem from="1634824907672" duration="4251000" />
       <workItem from="1636598267870" duration="4254000" />
-      <workItem from="1637763414067" duration="1451000" />
+      <workItem from="1637763414067" duration="6335000" />
     </task>
     <servers />
   </component>
