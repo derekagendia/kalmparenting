@@ -10,13 +10,12 @@
                 <h3 class="display-3 mb-5" style="padding-top:13rem;">
                     {{ __('Raising responsible kids while pursuing a career is possible!') }}
                 </h3>
-                <p class="lead fw-bolder">Give our platform a try, and enter a world of parental knowledge that will
-                    turn you into an amazing parent</p>
+                <p class="lead fw-bolder">{{ __("Give our platform a try, and enter a world of parental knowledge that will turn you into an amazing parent") }}</p>
                 <p class="mt-5"><a href="#" aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                                    href="#">
-                        <button class="btn btn-danger">Join our community</button>
+                        <button class="btn btn-danger">{{ __("Join our community") }}</button>
                     </a> <a href="#">
-                        <button class="btn btn-outline-danger">Learn more</button>
+                        <button class="btn btn-outline-danger">{{ __("Learn more") }}</button>
                     </a></p>
             </div>
             <div class="col-md-6" data-aos="flip-right" data-aos-duration="2000">
@@ -35,15 +34,14 @@
                 <div class="col-md-6">
                     <h1 class="text-white display-4 mb-3" data-aos="flip-left"
                         data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000">What is Kalm parenting</h1>
+                        data-aos-duration="1000">{{ __("What is Kalm parenting?") }}</h1>
                     <p class="text-white" data-aos="flip-right"
                        data-aos-easing="ease-out-cubic"
                        data-aos-duration="2000">
-                        Kalm parenting is a platform made for women who want to raise their kids to become responsible
-                        individuals in the society without necessarily sacrificing their own dreams and aspirations.
+                        {{ __("Kalm parenting is a platform made for women who want to raise their kids to become responsible individuals in the society without necessarily sacrificing their own dreams and aspirations.") }}
                     </p>
                     <p data-aos="zoom-in" data-aos-duration="1000" ><a href="#" aria-current="page" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">
-                            <button class="btn btn-white">Join our community</button>
+                            <button class="btn btn-white">{{ __("Join our community") }}</button>
                         </a></p>
                 </div>
             </div>
@@ -57,13 +55,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="display-4 text-dark mb-5">Is this familiar?</h1>
+                    <h1 class="display-4 text-dark mb-5">{{ __("Is this familiar?") }}</h1>
                     <div class="d-flex mb-5">
                         <div class="flex-shrink-0">
                             <button class="btn btn-danger btn-circle"><i class="fe fe-check"></i></button>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            You are scared of having more children because of the impact it will have on your career
+                            {{ __("You are scared of having more children because of the impact it will have on your career") }}
                         </div>
                     </div>
                     <div class="d-flex mb-5">
@@ -71,8 +69,7 @@
                             <button class="btn btn-danger btn-circle"><i class="fe fe-check"></i></button>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            You feel like you have to put a pause on your career or dreams in order to raise your child
-                            right
+                            {{ __("You feel like you have to put a pause on your career or dreams in order to raise your child right?") }}
                         </div>
                     </div>
                     <div class="d-flex mb-5">
@@ -80,17 +77,16 @@
                             <button class="btn btn-danger btn-circle"><i class="fe fe-check"></i></button>
                         </div>
                         <div class="flex-grow-1 ms-3">
-                            You are trying to figure out how to rasie your child the right way
+                            {{ __("You are trying to figure out how to rasie your child the right way") }}
                         </div>
                     </div>
 
                     <p class="lead text-bold mt-5">
-                        If that is the case, this platform is ment for you. Join our community, made up of hundreds of
-                        mothers like you aspiring to raise great kids and have a fulfilling life in the procees
+                        {{ __("If that is the case, this platform is ment for you. Join our community, made up of hundreds of mothers like you aspiring to raise great kids and have a fulfilling life in the procees") }}
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="./img/mom.png" class="img-fluid">
+                    <img src="{{ asset('img/mom.png') }}" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -134,7 +130,7 @@
                                     {{ $post->excerpt }}
                                 </small>
                                 <p class="mt-3"><a href="{{ route('blog.detail',$post->slug) }}">
-                                        <button class="btn btn-danger btn-sm">Details</button>
+                                        <button class="btn btn-danger btn-sm">{{ __("Details") }}</button>
                                     </a></p>
 
                             </div>
@@ -189,11 +185,8 @@
                                         <img src="./img/cardimage.jpg" class="img-fluid">
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="text-center mt-5">The calm parenting platform has been a game changer
-                                            for me. being able to take care of my kids while pursuing my dreams is
-                                            really a dream come true. I highly recommend this platform for any mom out
-                                            there</p>
-                                        <p class="text-sm text-muted text-center fw-bold">- Jane Doe (Lawyer)</p>
+                                        <p class="text-center mt-5"> {{ __("The calm parenting platform has been a game changer for me. being able to take care of my kids while pursuing my dreams is really a dream come true. I highly recommend this platform for any mom out there") }}</p>
+                                        <p class="text-sm text-muted text-center fw-bold">  (Avocate)</p>
                                     </div>
                                 </div>
                             </div>
